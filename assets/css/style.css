@@ -77,3 +77,70 @@ a:hover {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
+
+/* ======= BUTTONS ======= */
+.btn-primary {
+  display: inline-block;
+  background: #00aaff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.btn-primary:hover {
+  background: #008ecc;
+}
+
+/* ======= ALERT BOXES ======= */
+.alert-box {
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* ======= INFO BOX ======= */
+.info-box {
+  padding: 1rem;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+/* ======= TITLE STYLES ======= */
+h2.section-title {
+  border-left: 5px solid #00aaff;
+  padding-left: 1rem;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* ======= BOXED CONTENT ======= */
+.box {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+/* ======= TABLE STYLES ======= */
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.table-style th,
+.table-style td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+.table-style th {
+  background-color: #f0f0f0;
+}
