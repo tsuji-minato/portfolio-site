@@ -8,7 +8,7 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
+  background-color: #f9f9f9f9;
   color: #333;
   padding: 2rem;
 }
@@ -21,7 +21,7 @@ body {
 }
 
 header, footer {
-  background-color: #eee;
+  background-color: #797d81;
   padding: 1rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -33,7 +33,7 @@ main {
 
 footer {
   font-size: 0.8rem;
-  color: #777;
+  color: #3e4146;
 }
 
 /* ======= NAVIGATION ======= */
@@ -143,4 +143,71 @@ h2.section-title {
 }
 .table-style th {
   background-color: #f0f0f0;
+}
+
+/* ======= SIDE BAR ======= */
+.sidebar {
+  width: 25%;
+  float: right;
+  padding: 1em;
+  background-color: #f7f7f7;
+  border-left: 1px solid #ddd;
+}
+
+.widget {
+  margin-bottom: 2em;
+}
+
+.widget-title {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.btn {
+  position: relative;
+  background: transparent;
+  color: #333;
+  border-radius: 0;
+  outline: 1px solid #333;
+  z-index: 1;
+  box-shadow: none;
+  padding: 0.6em 1.2em;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* ======= ボタンテキスト（影付き） ======= */
+
+.btn::after {
+  content: "";
+  position: absolute;
+  background-color: #f4afb4;
+  width: 100%;
+  height: 100%;
+  top: 6px;
+  left: 6px;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+.btn:hover::after {
+  top: 0;
+  left: 0;
+}
+
+.github-btn {
+  border-color: #3e4146;
+  color: #3e4146;
+}
+
+.insta-btn {
+  border-color: #3e4146;
+  color: #3e4146;
+}
+
+.btn-wrapper {
+  display: inline-block;
+  margin-bottom: 1em; /* 下にだけスペース */
 }
