@@ -1,0 +1,15 @@
+/* ======= TABLE STYLES ======= */
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.table-style th,
+.table-style td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+.table-style th {
+  background-color: #f0f0f0;
+}
