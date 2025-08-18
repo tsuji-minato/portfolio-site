@@ -1,10 +1,4 @@
 /* ======= 基本のボタン ======= */
-
-.btn-wrapper {
-  display: inline-block;
-  margin-bottom: 1em; /* 下にだけスペース */
-}
-
 .btn {
   position: relative;
   background: transparent;
@@ -17,7 +11,7 @@
   transition: all 0.3s ease;
 }
 
-/* ======= BUTTONS ======= */
+/* ======= プライマリ ======= */
 .btn-primary {
   display: inline-block;
   background: #00aaff;
@@ -27,11 +21,17 @@
   text-decoration: none;
   transition: background 0.3s;
 }
+
 .btn-primary:hover {
   background: #008ecc;
 }
 
-/* ======= 影付きボタン（pink） ======= */
+/* ======= 影付き（pink） ======= */
+.btn-wrapper {
+  display: inline-block;
+  margin: 0 0.5em 1em 0;
+}
+
 .btn::after {
   content: "";
   position: absolute;
