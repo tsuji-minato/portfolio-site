@@ -1,18 +1,18 @@
 /* リセット（最初に） */
-@import url('asset/css/module/reset.css');
+@import url('module/reset.css');
 
 /* 基本レイアウト＆構造 */
-@import url('asset/css/module/layout.css');
-@import url('asset/css/module/nav.css');
-@import url('asset/css/module/section.css');
-@import url('asset/css/module/sidebar.css');
-@import url('asset/css/module/widget.css');
+@import url('module/layout.css');
+@import url('module/nav.css');
+@import url('module/section.css');
+@import url('module/sidebar.css');
+@import url('module/widget.css');
 
 /* コンテンツ系（テキスト、カード、表など） */
-@import url('asset/css/module/content.css');
-@import url('asset/css/module/card.css');
-@import url('asset/css/module/table.css');
-@import url('asset/css/module/box.css');
+@import url('module/content.css');
+@import url('module/card.css');
+@import url('module/table.css');
+@import url('module/box.css');
 
 /* パーツ（ボタンなど） */
-@import url('asset/css/module/button.css');
+@import url('module/button.css');
