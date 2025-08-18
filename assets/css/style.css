@@ -1,18 +1,11 @@
-/* リセット（最初に） */
-@import url('module/reset.css');
-
-/* 基本レイアウト＆構造 */
-@import url('module/layout.css');
-@import url('module/nav.css');
-@import url('module/section.css');
-@import url('module/sidebar.css');
-@import url('module/widget.css');
-
-/* コンテンツ系（テキスト、カード、表など） */
-@import url('module/content.css');
-@import url('module/card.css');
-@import url('module/table.css');
-@import url('module/box.css');
-
-/* パーツ（ボタンなど） */
-@import url('module/button.css');
+@import url('assets/css/module/reset.css');
+@import url('assets/css/module/layout.css');
+@import url('assets/css/module/nav.css');
+@import url('assets/css/module/section.css');
+@import url('assets/css/module/sidebar.css');
+@import url('assets/css/module/widget.css');
+@import url('assets/css/module/content.css');
+@import url('assets/css/module/card.css');
+@import url('assets/css/module/table.css');
+@import url('assets/css/module/box.css');
+@import url('assets/css/module/button.css');
