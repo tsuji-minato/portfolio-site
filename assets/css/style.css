@@ -1,8 +1,8 @@
-@import url('./module/reset.css');
+@import url('/module/reset.css');
 @import url('assets/css/module/layout.css');
 @import url('assets/css/module/nav.css');
 @import url('assets/css/module/section.css');
-@import url('./sidebar.css');
+@import url('./mobule/sidebar.css');
 @import url('./widget.css');
 @import url('assets/css/module/content.css');
 @import url('assets/css/module/card.css');
