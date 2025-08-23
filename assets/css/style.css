@@ -1,8 +1,30 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+  margin: 0;
+  background-color: #eaedf2;
+
+  font-family: "Montserrat", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "BIZ UDGothic", YuGothic, "Yu Gothic", "ヒラギノ角ゴシック",
+    "メイリオ", Meiryo, sans-serif;
+
   font-size: 15px;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   color: #333;
+
+  line-height: 1.83;
+  word-break: normal;
+  overflow-wrap: break-word;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;  
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -18,6 +40,90 @@ img {
   border-style: none;
 }
 
+/* 文字の基本設定 */
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  margin: 0;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: "Menlo", "Consolas", "monaco", "monospace", "ＭＳ ゴシック",
+    sans-serif;
+  font-size: 1em;
+}
+pre {
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  vertical-align: baseline;
+  line-height: 0;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+
+dl, menu, ol, ul { margin: 1em 0; }
+dd { margin: 0; }
+menu { padding: 0 0 0 40px; }
+ol, ul { list-style-type: none; padding: 0; }
+nav ul, nav ol { list-style: none; list-style-image: none; }
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  vertical-align: middle;
+}
+svg:not(:root) { overflow: hidden; }
+iframe { max-width: 100%; }
+figure { margin: 0; }
+
+.entry-content img.alignleft {
+  display: inline;
+  float: left;
+  margin: 0.5em 1.2em 0.5em 0;
+}
+.entry-content img.alignright {
+  display: inline;
+  float: right;
+  margin: 0.5em 0 0.5em 1em;
+}
 
 
 .pc-only {
@@ -548,3 +654,13 @@ img {
     margin-bottom: 20px;
   }
 }
+
+@import url("/assets/css/mobule/box-fancy.css");
+@import url("/assets/css/mobule/card-link.css");
+@import url("/assets/css/mobule/codebox.css");
+@import url("/assets/css/mobule/list-custom.css");
+@import url("/assets/css/mobule/responsive.css");
+@import url("/assets/css/mobule/shortcodes.css");
+@import url("/assets/css/mobule/speech-bubble.css");
+@import url("/assets/css/mobule/speech-bubble.css");
+@import url("/assets/css/mobule/toc.css");
