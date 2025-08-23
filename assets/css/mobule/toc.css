@@ -1,0 +1,84 @@
+/** TOC **/
+#toc_container {
+  position: relative;
+  width: 100% !important;
+  margin: 2.5em 0;
+  padding: 20px 15px;
+  border-top: solid 5px;
+  font-size: 0.95em;
+  background: #f9f9f9;
+  box-shadow: 0 1.5px 2.4px rgba(0, 0, 0, 0.15);
+}
+#toc_container .toc_title {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 0 45px;
+  padding: 5px 0 5px 10px;
+  font-size: 23px;
+  font-weight: bold;
+}
+#toc_container .toc_title:before {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -45px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: FontAwesome;
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+  line-height: 50px;
+  content: "\f0ca";
+}
+.toc_toggle {
+  display: inline-block;
+  vertical-align: middle;
+  width: 75px;
+  height: 25px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background: #cbcbcb;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  line-height: 25px;
+}
+#toc_container .toc_toggle a {
+  color: #fff;
+  text-decoration: none;
+}
+#toc_container ul {
+  list-style-type: disc;
+  padding: 0;
+  border: none;
+}
+#toc_container .toc_list {
+  margin-bottom: 0;
+  margin-left: 18px;
+  color: #585858;
+}
+#toc_container .toc_list li {
+  font-weight: bold;
+}
+#toc_container .toc_list li a {
+  color: #555;
+}
+#toc_container .toc_list li ul {
+  margin: 5px;
+  padding-left: 15px;
+}
+#toc_container .toc_list li ul li {
+  margin: 0;
+  font-size: 0.95em;
+  font-weight: normal;
+}
+.toc_number {
+  padding-right: 2px;
+  font-family: Quicksand, sans-serif;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/* TOCここまで */
