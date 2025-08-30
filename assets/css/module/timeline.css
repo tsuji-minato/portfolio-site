@@ -1,134 +1,90 @@
-/* =========================
-   Timeline (for .tl markup)
-   ========================= */
-
-/* 色・余白の調整用カスタムプロパティ */
 :root {
-  --tl-accent: #3b82f6;   /* マーカー＆ラインの色（SANGOの .main-bc があればそちらが優先） */
-  --tl-border: #e5e7eb;   /* カードの枠線色 */
-  --tl-bg: #ffffff;       /* カード背景 */
-  --tl-text: #111827;     /* 文字色 */
-  --tl-muted: #6b7280;    /* サブテキスト色 */
-  --tl-gap: 20px;           /* 項目間の縦間隔 */
-  --tl-line-x: 18px;        /* 縦ラインのX位置（左からの距離） */
-  --tl-card-pad: 16px;      /* カード内パディング */
-  --tl-marker-size: 12px;   /* マーカードットの直径 */
+  --tl-accent: #1ca9e3;     /* アクセント色（好みで変更OK） */
+  --tl-line:   #ccd5db;     /* 縦ライン＆ボーダー色 */
+  --tl-text:   #333;
 }
 
-/* SANGO等の .main-bc / .main-bdr が定義されている場合はそれを採用 */
-.main-bc { color: var(--tl-accent); } /* 既存テーマが上書きする想定 */
-.main-bdr { border-color: var(--tl-accent); } /* 既存テーマが上書きする想定 */
+/* リスト本体 */
+.tl {
+  margin: 2em auto;      /* 全体を中央寄せ、上下に余白 */
+  padding-left: 50px;    /* 左余白を広く */
+  padding-right: 30px;   /* 右余白も追加 */
+  max-width: 720px;      /* レスポンシブなら幅制限すると見栄えが安定 */
+}
 
-/* タイムライン全体 */
-ul.tl {
+/* 各アイテム */
+.tl li {
   position: relative;
-  margin: 0;
-  padding: 0 0 0 48px; /* 左にラインとマーカー分の余白 */
-  list-style: none;
-  color: var(--tl-text);
+  padding: 0 0 2em 2.5em; /* 左にマーカー＆縦線の余白 */
 }
 
-/* 縦ライン */
-ul.tl::before {
+/* 縦ライン（各li内で下方向へ伸びる） */
+.tl > li::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: var(--tl-line-x);
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--tl-accent) 40%, transparent),
-    color-mix(in srgb, var(--tl-accent) 70%, transparent)
-  );
-  opacity: 0.9;
+  top: 24px;
+  bottom: 0;
+  left: 6px;
+  width: 3px;
+  background: var(--tl-line);
 }
 
-/* 各アイテム（li.main-bdr を想定） */
-ul.tl > li {
-  position: relative;
-  margin: 0 0 var(--tl-gap);
-  background: var(--tl-bg);
-  border: 1px solid var(--tl-border);
-  border-radius: 12px;
-  padding: var(--tl-card-pad);
-  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+/* 最後のアイテムは縦ラインを消す */
+.tl li:last-of-type::before {
+  content: none;
 }
 
-/* マーカー */
-ul.tl .tl_marker {
+/* マーカー（丸） */
+.tl_marker {
   position: absolute;
-  left: calc(var(--tl-line-x) - var(--tl-marker-size) / 2);
-  top: 18px; /* タイトルとラベルの上あたりで合わせる */
-  width: var(--tl-marker-size);
-  height: var(--tl-marker-size);
+  top: 6px;
+  left: 0;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  border: 3px solid var(--tl-accent);
+  background: #fff; /* 基本は中抜き（白） */
+}
+
+/* 中間は中抜き、最初と最後は塗りつぶし */
+.tl li:not(:first-of-type):not(:last-of-type) .tl_marker {
+  background: transparent; /* 中間だけ中抜きでもOKならこれで */
+}
+.tl li:first-of-type .tl_marker,
+.tl li:last-of-type  .tl_marker {
   background: var(--tl-accent);
-  border: 2px solid #fff;       /* カードから浮かせるための白縁 */
-  box-shadow: 0 0 0 2px var(--tl-accent, #3b82f6); /* 外側にアクセントの輪郭 */
 }
 
-/* ラベル（日時やステータスなど） */
-ul.tl .tl_label {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1;
-  color: #fff;
-  background: var(--tl-accent);
-  border-radius: 9999px;
-  padding: 6px 10px;
-  margin-bottom: 8px;
-  font-weight: 600;
+/* ラベル・タイトル・本文 */
+.tl_label {
+  padding-top: 2px;
+  color: #90969a;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
-/* タイトル */
-ul.tl .tl_title {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 4px 0 6px;
-  color: var(--tl-text);
+.tl_title {
+  font-size: 1.1em;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
-/* 本文 */
-ul.tl .tl_content {
-  font-size: 14px;
-  color: var(--tl-muted);
-  line-height: 1.7;
+.tl_content {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-top: 0.5em;
+  padding: 0 0 1.5em;
+  border-bottom: 1px dashed var(--tl-line);
 }
 
-ul.tl .tl_content p {
-  margin: 0 0 0.6em;
+/* 以下はSANGOショートコード系を使うなら有効。
+   使っていなければ削ってOK。 */
+.tl_content > * {
+  margin: 0.7em 0 0;
 }
-
-ul.tl .tl_content a {
-  text-decoration: underline;
-}
-
-/* ダークモード対応（必要なら） */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tl-border: #1f2937;
-    --tl-bg: #0b1220;
-    --tl-text: #e5e7eb;
-    --tl-muted: #9ca3af;
-  }
-
-  ul.tl::before {
-    opacity: 0.8;
-  }
-
-  ul.tl > li {
-    box-shadow: 0 1px 2px rgba(0,0,0,.25);
-  }
-
-  ul.tl .tl_marker {
-    border-color: #0b1220;
-  }
-}
-
-/* レスポンシブ微調整 */
-@media (max-width: 480px) {
-  :root { --tl-line-x: 14px; }
-  ul.tl { padding-left: 40px; }
-  ul.tl .tl_marker { top: 16px; }
-}
+.tl_content .sng-box { margin-top: 1em; }
+.tl_content .box28,
+.tl_content .box30,
+.tl_content .box31,
+.tl_content .box32,
+.tl_content .box33 { margin-top: 2.3em; }
