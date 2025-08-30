@@ -264,3 +264,76 @@
         transform: none;
     }
 }
+
+/* ==== SANGO Block Button (sgb/btn) ==== */
+.wp-block-sgb-btn .btn {
+    display: inline-block;
+    position: relative;
+    border-radius: calc(var(--sgb--custom--box-radius, 4) * 1px);
+    padding: 0.4em 2.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* ホバー時のエフェクト（Raised風） */
+.wp-block-sgb-btn .btn.raised:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.wp-block-sgb-btn .btn.raised:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 白い折り返しっぽい装飾 */
+.wp-block-sgb-btn .btn::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+}
+
+/* ==== SANGO Block Button: View More ==== */
+.wp-block-sgb-btn .btn.normal {
+    display: inline-block;
+    position: relative;
+    border: 1px solid var(--sgb--custom--bd-color, #333);
+    color: var(--sgb--custom--text-color, #333) !important;
+    border-radius: calc(var(--sgb--custom--box-radius, 0) * 1px);
+    font-size: .95em;
+    font-weight: 600;
+    background-color: transparent !important;
+    /* 背景透過 */
+    padding: 0.4em 4em;
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+/* 矢印部分 */
+.wp-block-sgb-btn .btn.normal::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 0.3em);
+    right: 0.5em;
+    width: 2em;
+    height: 0.35em;
+    border-right: 2px solid var(--sgb--custom--bd-color, #333);
+    border-bottom: 1px solid var(--sgb--custom--bd-color, #333);
+    transform: skew(45deg);
+    transition: right .3s ease, width .3s ease;
+}
+
+/* ホバー時の動き */
+.wp-block-sgb-btn .btn.normal:hover {
+    backdrop-filter: blur(5px);
+}
+
+.wp-block-sgb-btn .btn.normal:hover::after {
+    right: -1em;
+    width: 2.2em;
+}
