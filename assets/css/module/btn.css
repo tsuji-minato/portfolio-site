@@ -1,0 +1,200 @@
+/*ボタン*/
+body#tinymce.wp-editor .btn {
+  margin: 0.5em 0.5em 0.5em 0;
+  text-decoration: none !important;
+}
+body#tinymce.wp-editor .raised {
+  display: inline-block;
+  margin: 0.5em 0;
+  padding: 0.4em 1.3em;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2), 0 2px 3px -2px rgba(0, 0, 0, 0.15);
+  color: #fff !important;
+  text-decoration: none;
+  vertical-align: middle;
+  transition: 0.3s ease-in-out;
+}
+body#tinymce.wp-editor a.btn:hover {
+  text-decoration: none;
+}
+body#tinymce.wp-editor .blue-bc {
+  background: #4f9df4;
+}
+body#tinymce.wp-editor .red-bc {
+  background: #f88080;
+}
+body#tinymce.wp-editor .green-bc {
+  background: #90d581;
+}
+/*フラットボタン*/
+body#tinymce.wp-editor .flat1 {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  background: #ececec;
+  color: #00bcd4 !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat2 {
+  display: inline-block;
+  padding: 0.3em 1em;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  color: #67c5ff !important;
+}
+body#tinymce.wp-editor .flat3 {
+  display: inline-block;
+  padding: 0.4em 1em;
+  border: double 4px #67c5ff;
+  border-radius: 3px;
+  color: #67c5ff !important;
+}
+
+body#tinymce.wp-editor .flat4,
+body#tinymce.wp-editor .flat5 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: dashed 2px #67c5ff;
+  border-radius: 3px;
+  color: #67c5ff !important;
+}
+
+body#tinymce.wp-editor .flat6 {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1em;
+  border-right: solid 4px #668ad8;
+  border-left: solid 4px #668ad8;
+  background: #e1f3ff;
+  color: #668ad8 !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat7 {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 0;
+  color: #67c5ff !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat7:before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background: #67c5ff !important;
+  content: "";
+}
+body#tinymce.wp-editor .flat8 {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 0.5em;
+  border-radius: 0 15px 15px 0;
+  background: #ececec;
+  color: #00bcd4 !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat9 {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 0.5em;
+  background: #00bcd4;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat10 {
+  display: inline-block;
+  position: relative;
+  padding: 8px 10px 5px 10px;
+  border-bottom: solid 4px #ffa000;
+  border-radius: 15px 15px 0 0;
+  background: #fff1da;
+  color: #ffa000 !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .flat11 {
+  display: inline-block;
+  position: relative;
+  padding: 0.5em 1em;
+  padding: 0.5em 1em;
+  border-right: solid 4px #668ad8;
+  border-left: solid 4px #668ad8;
+  background: repeating-linear-gradient(
+    -45deg,
+    #cce7ff,
+    #cce7ff 3px,
+    #e9f4ff 3px,
+    #e9f4ff 7px
+  );
+  text-shadow: 0 0 5px white;
+  color: #668ad8 !important;
+  font-weight: bold;
+}
+
+/*グラデーションボタン*/
+body#tinymce.wp-editor .grad1 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background: linear-gradient(45deg, #709dff 0%, #92e6ff 100%);
+  color: #fff !important;
+}
+body#tinymce.wp-editor .grad2 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background: linear-gradient(95deg, #ff7070 0%, #fdd973 100%);
+  color: #fff !important;
+}
+
+body#tinymce.wp-editor .grad3 {
+  display: inline-block;
+  padding: 7px 20px;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #ffc107 0%, #ff8b5f 100%);
+  color: #fff !important;
+}
+
+body#tinymce.wp-editor .grad4 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: linear-gradient(#6795fd 0%, #67ceff 100%);
+  color: #fff !important;
+}
+
+body#tinymce.wp-editor .cubic1 {
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-bottom: solid 4px rgba(0, 0, 0, 0.27);
+  border-radius: 3px;
+  color: #fff !important;
+}
+
+body#tinymce.wp-editor .cubic2 {
+  display: inline-block;
+  position: relative;
+  padding: 6px 15px 4px;
+  border-bottom: solid 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px; /*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    0 2px 2px rgba(0, 0, 0, 0.19);
+  color: #fff !important;
+  font-weight: bold;
+}
+
+body#tinymce.wp-editor .cubic3 {
+  display: inline-block;
+  position: relative;
+  padding: 0.25em 0.5em;
+  border: solid 1px rgba(0, 0, 0, 0.19);
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  color: #fff !important;
+}

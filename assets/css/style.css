@@ -1,4 +1,5 @@
 @import url("/assets/css/module/box-fancy.css");
+@import url("/assets/css/module/btn.css");
 @import url("/assets/css/module/card-link.css");
 @import url("/assets/css/module/codebox.css");
 @import url("/assets/css/module/list-custom.css");
@@ -29,10 +30,12 @@ body {
   overflow-wrap: break-word;
 
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+  -moz-osx-font-smoothing: grayscale;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -54,16 +57,19 @@ h1 {
   margin: 0.67em 0;
   font-size: 2em;
 }
+
 b,
 strong,
 .strong {
   font-weight: bold;
 }
+
 dfn,
 em,
 .em {
   font-style: italic;
 }
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -72,6 +78,7 @@ hr {
 pre {
   margin: 0;
 }
+
 code,
 kbd,
 pre,
@@ -80,20 +87,25 @@ samp {
     sans-serif;
   font-size: 1em;
 }
+
 pre {
   white-space: pre-wrap;
 }
+
 q {
   quotes: "\201C" "\201D" "\2018" "\2019";
 }
+
 q:before,
 q:after {
   content: "";
   content: none;
 }
+
 small {
   font-size: 75%;
 }
+
 sub,
 sup {
   position: relative;
@@ -101,33 +113,67 @@ sup {
   vertical-align: baseline;
   line-height: 0;
 }
+
 sup {
   top: -0.5em;
 }
+
 sub {
   bottom: -0.25em;
 }
 
-dl, menu, ol, ul { margin: 1em 0; }
-dd { margin: 0; }
-menu { padding: 0 0 0 40px; }
-ol, ul { list-style-type: none; padding: 0; }
-nav ul, nav ol { list-style: none; list-style-image: none; }
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 0;
+}
+
+menu {
+  padding: 0 0 0 40px;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
   border: 0;
   vertical-align: middle;
 }
-svg:not(:root) { overflow: hidden; }
-iframe { max-width: 100%; }
-figure { margin: 0; }
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
 
 .entry-content img.alignleft {
   display: inline;
   float: left;
   margin: 0.5em 1.2em 0.5em 0;
 }
+
 .entry-content img.alignright {
   display: inline;
   float: right;
@@ -192,7 +238,7 @@ figure { margin: 0; }
   z-index: 1;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 5px 10px -6px rgba(0,0,0,.1);
+  box-shadow: 0 5px 10px -6px rgba(0, 0, 0, .1);
 }
 
 .header .container {
@@ -234,6 +280,7 @@ figure { margin: 0; }
   letter-spacing: .05em;
   color: #333;
 }
+
 .gnav-item a:after {
   position: absolute;
   bottom: 0;
@@ -273,6 +320,7 @@ figure { margin: 0; }
   margin-bottom: 5px;
   letter-spacing: .1em;
 }
+
 .mv-subtitle {
   font-size: 20px;
   font-weight: bold;
@@ -371,14 +419,17 @@ figure { margin: 0; }
   max-width: 800px;
   margin: 0 auto;
 }
+
 .profile-img {
   width: 20%;
   margin-right: 30px;
   border-radius: 50%;
 }
+
 .profile-img img {
   border-radius: 50%;
 }
+
 .profile-body {
   flex: 1;
 }
@@ -406,6 +457,7 @@ figure { margin: 0; }
 .contact-text {
   margin-top: 10px;
 }
+
 /*--------------------------------
  ページトップ
 ---------------------------------*/
@@ -566,6 +618,7 @@ figure { margin: 0; }
   .mv-title {
     font-size: 30px;
   }
+
   .mv-subtitle {
     font-size: 16px;
     margin-bottom: 20px;
@@ -623,6 +676,7 @@ figure { margin: 0; }
   .profile {
     display: block;
   }
+
   .profile-img {
     width: 150px;
     margin: 0 auto;
