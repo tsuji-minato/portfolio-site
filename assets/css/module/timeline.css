@@ -1,8 +1,12 @@
 :root {
-  --tl-accent: #1ca9e3;     /* アクセント色（好みで変更OK） */
+  --tl-accent: #f4afb4;     /* アクセント色（好みで変更OK） */
   --tl-line:   #ccd5db;     /* 縦ライン＆ボーダー色 */
-  --tl-text:   #333;
+  --tl-text:   #3e4146;
 }
+
+/* SANGO等の .main-bc / .main-bdr が定義されている場合はそれを採用 */
+.main-bc { color: var(--tl-accent); } /* 既存テーマが上書きする想定 */
+.main-bdr { border-color: var(--tl-accent); } /* 既存テーマが上書きする想定 */
 
 /* リスト本体 */
 .tl {
